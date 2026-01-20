@@ -6,7 +6,7 @@ The current leaderboard is set forth immediately below, followed by notes on met
 
 <!-- LEADERBOARD_START -->
 Last updated on January 20, 2026
-![Chart-01.20.26](/assets/chart-01-19-26.png)
+![Chart-01.20.26](/assets/chart-01-19-26.png))
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -81,7 +81,6 @@ At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an un
 #### Model Access:
 **kimi-K2-Thinking** was accessed via kimi.com (logged in) in January 2026.
 
--------------
 [^1]: This particular niche area of U.S. law is not well-represented in existing LLMs' training data, as shown by the fairly poor *prinzbench* scores achieved by several frontier models, including Anthropic's Opus 4.5 and Sonnet 4.5, as well as models released by Moonshot and xAI.
 
 [^2]: The author does not consider the difference among these three scores to be significant and views the Legal Research sub-scores achieved by these three models as roughly equivalent.
