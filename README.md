@@ -1,4 +1,4 @@
-![[Pasted image 20260119132633.png]]
+![Prinzbench](assets/prinzbench.png)
 # prinzbench
 prinzbench is a private benchmark that ranks LLMs based on their ability to conduct legal research and analysis ("legal reasoning") and locate obscure publicly available information online ("needle-in-the-haystack search").
 
@@ -6,7 +6,7 @@ The current leaderboard is set forth immediately below, followed by notes on met
 
 <!-- LEADERBOARD_START -->
 Last updated on January 20, 2026
-![[Pasted image 20260119204021.png]]
+![Chart-01.20.26](/assets/chart-01-19-26.png))
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
