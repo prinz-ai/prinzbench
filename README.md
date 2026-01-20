@@ -6,7 +6,7 @@ The current leaderboard is set forth immediately below, followed by notes on met
 
 <!-- LEADERBOARD_START -->
 Last updated on January 20, 2026
-![Chart-01.20.26](/assets/chart-01-19-26.png))
+![Chart-01.20.26](/assets/chart-01-19-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
