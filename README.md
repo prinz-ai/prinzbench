@@ -31,9 +31,9 @@ Why this benchmark was created:
 
 All 33 questions were drafted by the author, and have never been - nor will they ever be - shared with any other person.  
 
-The **Legal Research*** questions all relate to a particular niche area of U.S. law in which the author is an expert.  To answer these questions correctly, the LLM is required to locate the relevant statutes, regulations and/or regulatory guidance - all of which are publicly available online.  The answer to each Legal Research question can be found by examining only a few applicable legal authorities; there is never any need for the LLM to trawl through hundreds of cases and juxtapose their holdings in order to arrive at the correct response.  Certain Legal Research questions also require the LLM to locate obscure publicly available factual information to reach the correct conclusion.  
+The **Legal Research** questions all relate to a particular niche area of U.S. law in which the author is an expert.  To answer these questions correctly, the LLM is required to locate the relevant statutes, regulations and/or regulatory guidance - all of which are publicly available online.  The answer to each Legal Research question can be found by examining only a few applicable legal authorities; there is never any need for the LLM to trawl through hundreds of cases and juxtapose their holdings in order to arrive at the correct response.  Certain Legal Research questions also require the LLM to locate obscure publicly available factual information to reach the correct conclusion.  
 
-The **Search*** questions were added to *prinzbench* to strengthen the benchmark's ability to test LLMs for "needle-in-the-haystack" search capabilities.  These questions are not necessarily related to the practice of law.  
+The **Search** questions were added to *prinzbench* to strengthen the benchmark's ability to test LLMs for "needle-in-the-haystack" search capabilities.  These questions are not necessarily related to the practice of law.  
 
 All questions included in *prinzbench* are considered by the author to be very difficult: generally of the kind that, in the author's judgment, an average junior associate practicing in the relevant area of the law would likely not be able answer correctly if provided no research direction beyond the prompt provided to the LLM.  In compiling *prinzbench*, the author endeavored to include therein only truly challenging questions, and each candidate question was tested on an ad-hoc basis with various LLMs before a decision was made regarding its inclusion in the benchmark.  Well over 100 candidate questions were rejected through this process, as the LLMs - frustratingly for the author - had found them "too easy".
 
@@ -51,11 +51,11 @@ Some technical details regarding grading:
 ### OpenAI
 At the benchmark's creation in January 2026, **gpt-5.2-Thinking** achieved the highest score on *prinzbench* by a large margin (52/99, as compared to the next-best model's 36/99).  The model also achieved by far the best Legal Research and Search sub-scores (41/75 and 11/24, respectively).
 
-The author found the Search sub-score achieved by **gpt-5.2-Thinking*** to be surprisingly low, as the model, in several cases, failed to answer Search questions that gpt-5.x-Thinking models had correctly answered in the past.  The reason for this anecdotal degradation in performance is unclear.
+The author found the Search sub-score achieved by **gpt-5.2-Thinking** to be surprisingly low, as the model, in several cases, failed to answer Search questions that gpt-5.x-Thinking models had correctly answered in the past.  The reason for this anecdotal degradation in performance is unclear.
 
 **gpt-5.2-Thinking** took by far the longest amount of time to answer each *prinzbench* question.  In one instance, the model reasoned for >22 minutes in answering a particular Search question (its response, sadly, still wound up being incorrect).  It is possible that the impressive legal reasoning ability of **gpt-5.2-Thinking** as compared to that of the other tested models is driven at least partially by its significantly longer average thinking time.
 
-The author is considering benchmarking **gpt-5.2-Pro*** on *prinzbench.*  
+The author is considering benchmarking **gpt-5.2-Pro** on *prinzbench.*  
 #### Model Access:
 **gpt-5.2-Thinking** was accessed from the author's personal ChatGPT's Plus account, with "Extended Thinking" turned on, in January 2026.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.
 
