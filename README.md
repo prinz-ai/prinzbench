@@ -41,7 +41,7 @@ To arrive at each model's *prinzbench* (full) score, the model was asked each of
 
 In addition to each model's *prinzbench* (full) score, the leaderboard also presents each model's Legal Research sub-score (maximum 75 points) and Search sub-score (maximum 24 points), for informational purposes.
 ## Grading
-Each LLM's response to each question was personally graded by the author, unaided by AI.
+Each LLM's response to each question was personally graded by the author, unaided by AI. The author graded each output with full knowledge of which model had produced the output (i.e., grading was not "blind").
 
 Some technical details regarding grading:
 * A response was judged to be correct if the correct legal conclusion was present anywhere within the model's response.  For example, suppose the correct answer to a particular question is: "You must aggregate the impact of not fewer than 1,000 different transactions of the same type in order to violate a law; because it's unlikely that there would ever be 1,000 such transactions within the specified time frame, it is almost certain that the law was not violated."  If this exact reasoning was included in the body of the model's response, but the model's concluding paragraph simply said that the law was not violated, the response was marked as correct.
