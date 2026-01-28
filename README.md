@@ -14,13 +14,12 @@ Last updated on January 28, 2026
 | gemini-3-flash              |                             36 |                              29 |                       7 |
 | gemini-3-pro                |                             35 |                              29 |                       6 |
 | kimi-k2.5-thinking          |                             35 |                              28 |                       7 |
-| qwen-q3-max                 |                             25 |                              18 |                       7 |
 | grok-4.1-thinking           |                             25 |                              19 |                       6 |
+| qwen-q3-max                 |                             25 |                              18 |                       7 |
 | grok-4                      |                             23 |                              16 |                       7 |
 | kimi-k2-thinking            |                             22 |                              18 |                       4 |
 | sonnet-4.5                  |                             20 |                              20 |                       0 |
 | opus-4.5                    |                             14 |                              14 |                       0 |
-
 <!-- LEADERBOARD_END -->
 ## Purpose
 Why this benchmark was created:
