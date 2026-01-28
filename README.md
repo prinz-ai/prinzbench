@@ -5,14 +5,16 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on January 20, 2026
-![Chart-01.20.26](/assets/chart-01-19-26.png)
+Last updated on January 28, 2026
+![Chart-01.28.26](/assets/chart-01-28-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
 | gpt-5.2-thinking (extended) |                             52 |                              41 |                      11 |
 | gemini-3-flash              |                             36 |                              29 |                       7 |
 | gemini-3-pro                |                             35 |                              29 |                       6 |
+| kimi-k2.5-thinking          |                             35 |                              28 |                       7 |
+| qwen-q3-max                 |                             25 |                              18 |                       7 |
 | grok-4.1-thinking           |                             25 |                              19 |                       6 |
 | grok-4                      |                             23 |                              16 |                       7 |
 | kimi-k2-thinking            |                             22 |                              18 |                       4 |
@@ -41,7 +43,7 @@ To arrive at each model's *prinzbench* (full) score, the model was asked each of
 
 In addition to each model's *prinzbench* (full) score, the leaderboard also presents each model's Legal Research sub-score (maximum 75 points) and Search sub-score (maximum 24 points), for informational purposes.
 ## Grading
-Each LLM's response to each question was personally graded by the author, unaided by AI.
+Each LLM's response to each question was personally graded by the author, unaided by AI. The author graded each output with full knowledge of which model had produced the output (i.e., grading was not "blind").
 
 Some technical details regarding grading:
 * A response was judged to be correct if the correct legal conclusion was present anywhere within the model's response.  For example, suppose the correct answer to a particular question is: "You must aggregate the impact of not fewer than 1,000 different transactions of the same type in order to violate a law; because it's unlikely that there would ever be 1,000 such transactions within the specified time frame, it is almost certain that the law was not violated."  If this exact reasoning was included in the body of the model's response, but the model's concluding paragraph simply said that the law was not violated, the response was marked as correct.
@@ -77,9 +79,16 @@ At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4*
 **grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
 
 ### Moonshot AI
+On January 28, 2026, **kimi-K2.5-Thinking** achieved an impressive score of 35/99 on *prinzbench*, tying the second-place scores previously achieved by the Gemini 3 models.   
+
 At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an unspectacular score of 22/99 on *prinzbench*.  The model's performance was similar to the performance of the xAI models, although it slightly lagged them in the Search sub-score (4/25 vs. 7/25 and 6/25 for **grok-4** and **grok-4.1-Thinking**, respectively).
 #### Model Access:
-**kimi-K2-Thinking** was accessed via kimi.com (logged in) in January 2026.
+**kimi-K2.5-Thinking** and **kimi-K2-Thinking** were accessed via kimi.com (logged in) in January 2026.
+
+### Alibaba Cloud
+In January 2026, **qwen3-max** achieved an unspectacular score of 25/99 on *prinzbench*, tying with **grok-4.1-Thinking**.  The model performed significantly worse than **kimi-K2.5-Thinking**, which was released by Moonshot AI on the same day.
+#### Model Access:
+**qwen3-max** was accessed via chat.qwen.ai (logged in) in January 2026.
 
 [^1]: This particular niche area of U.S. law is not well-represented in existing LLMs' training data, as shown by the fairly poor *prinzbench* scores achieved by several frontier models, including Anthropic's Opus 4.5 and Sonnet 4.5, as well as models released by Moonshot and xAI.
 
