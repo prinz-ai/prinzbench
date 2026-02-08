@@ -5,8 +5,8 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on January 28, 2026
-![Chart-01.28.26](/assets/chart-01-28-26.png)
+Last updated on February 7, 2026
+![Chart-02.07.26](/assets/chart-02-07-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -19,6 +19,7 @@ Last updated on January 28, 2026
 | grok-4                      |                             23 |                              16 |                       7 |
 | kimi-k2-thinking            |                             22 |                              18 |                       4 |
 | sonnet-4.5                  |                             20 |                              20 |                       0 |
+| opus-4.6                    |                             19 |                              18 |                       1 |
 | opus-4.5                    |                             14 |                              14 |                       0 |
 <!-- LEADERBOARD_END -->
 ## Purpose
@@ -68,19 +69,21 @@ At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-p
 ### Anthropic
 At the benchmark's creation in January 2026, **opus-4.5** and **sonnet-4.5** achieved the worst two scores on *prinzbench* out of the eight total AI models tested.  **opus-4.5** was by far the worst-performing model on *prinzbench*, scoring just 14/99.  To the author's surprise, **sonnet-4.5** achieved a higher score on *prinzbench* than **opus-4.5** (20/99 vs. 14/99).  This difference is fairly significant, and, in the author's view, is likely explained by **sonnet-4.5** being the (slightly) better legal reasoner out of the two models - a counterintuitive result.  
 
-As of January 2026, the Anthropic models' Achilles' heel is their Search ability.  Both **opus-4.5** and **sonnet-4.5** scored 0/25 on the Search sub-section of *prinzbench*.  Focusing only on the Legal Research sub-scores, a more nuanced picture emerges of **sonnet-4.5**'s legal reasoning ability, as the model actually achieves a slightly higher Legal Research sub-score than the tested xAI and Moonshot models (20/75, as compared to 19/75 for **grok-4.1-Thinking** and 18/75 for **kimi-K2-Thinking**).[^2]  
+**opus-4.6**, released in February 2026, achieved a similar performance on *prinzbench* to Anthropic's previously tested models (19/99, one point lower than **sonnet-4.5**).   
+
+As of February 2026, the Anthropic models' Achilles' heel is their Search ability.  Both **opus-4.5** and **sonnet-4.5** scored 0/24 on the Search sub-section of *prinzbench*, and **opus-4.6** scored 1/24.  Focusing only on the Legal Research sub-scores, a more nuanced picture emerges of Anthropic models' legal reasoning ability, as, e.g., **sonnet-4.5** actually achieved a slightly higher Legal Research sub-score than the xAI and Moonshot models released in 2025 (*i.e.*, 20/75, as compared to 19/75 for **grok-4.1-Thinking** and 18/75 for **kimi-K2-Thinking**).[^2]  
 #### Model Access:
-**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.[^3]
+**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  **opus-4.6** was accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in February 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.[^3]
 
 ### xAI
-At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4** achieved unspectacular scores on *prinzbench* of 25/99 and 23/99 respectively.  The models performed as well as the Google models on the Search sub-score (6/25 and 7/25, respectively - which were the same results as those achieved by **gemini-3-flash** and **gemini-3-pro**), but significantly underperformed the Google models on the Legal Research sub-score.
+At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4** achieved unspectacular scores on *prinzbench* of 25/99 and 23/99 respectively.  The models performed as well as the Google models on the Search sub-score (6/24 and 7/24, respectively - which were the same results as those achieved by **gemini-3-flash** and **gemini-3-pro**), but significantly underperformed the Google models on the Legal Research sub-score.
 #### Model Access:
 **grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
 
 ### Moonshot AI
 On January 28, 2026, **kimi-K2.5-Thinking** achieved an impressive score of 35/99 on *prinzbench*, tying the second-place scores previously achieved by the Gemini 3 models.   
 
-At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an unspectacular score of 22/99 on *prinzbench*.  The model's performance was similar to the performance of the xAI models, although it slightly lagged them in the Search sub-score (4/25 vs. 7/25 and 6/25 for **grok-4** and **grok-4.1-Thinking**, respectively).
+At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an unspectacular score of 22/99 on *prinzbench*.  The model's performance was similar to the performance of the xAI models, although it slightly lagged them in the Search sub-score (4/24 vs. 7/24 and 6/24 for **grok-4** and **grok-4.1-Thinking**, respectively).
 #### Model Access:
 **kimi-K2.5-Thinking** and **kimi-K2-Thinking** were accessed via kimi.com (logged in) in January 2026.
 
