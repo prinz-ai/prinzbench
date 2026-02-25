@@ -5,12 +5,15 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on February 7, 2026
-![Chart-02.07.26](/assets/chart-02-07-26.png)
+Last updated on February 25, 2026
+![Chart-02.07.26](/assets/chart-02-25-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
 | gpt-5.2-thinking (extended) |                             52 |                              41 |                      11 |
+| gpt-5.3-codex-high          |                             52 |                              41 |                      11 |
+| gemini-3.1-pro              |                             50 |                              41 |                       9 |
+| grok-4.20                   |                             43 |                              34 |                       9 |
 | gemini-3-flash              |                             36 |                              29 |                       7 |
 | gemini-3-pro                |                             35 |                              29 |                       6 |
 | kimi-k2.5-thinking          |                             35 |                              28 |                       7 |
@@ -21,6 +24,7 @@ Last updated on February 7, 2026
 | sonnet-4.5                  |                             20 |                              20 |                       0 |
 | opus-4.6                    |                             19 |                              18 |                       1 |
 | opus-4.5                    |                             14 |                              14 |                       0 |
+| sonnet-4.6                  |                              8 |                               8 |                       0 |
 <!-- LEADERBOARD_END -->
 ## Purpose
 Why this benchmark was created:
@@ -55,30 +59,33 @@ At the benchmark's creation in January 2026, **gpt-5.2-Thinking** achieved the h
 
 The author found the Search sub-score achieved by **gpt-5.2-Thinking** to be surprisingly low, as the model, in several cases, failed to answer Search questions that gpt-5.x-Thinking models had correctly answered in the past.  The reason for this anecdotal degradation in performance is unclear.
 
-**gpt-5.2-Thinking** took by far the longest amount of time to answer each *prinzbench* question.  In one instance, the model reasoned for >22 minutes in answering a particular Search question (its response, sadly, still wound up being incorrect).  It is possible that the impressive legal reasoning ability of **gpt-5.2-Thinking** as compared to that of the other tested models is driven at least partially by its significantly longer average thinking time.
-
-The author is considering benchmarking **gpt-5.2-Pro** on *prinzbench.*  
+In February 2026, **gpt-5.3-Codex-high** matched the high score previously achieved by **gpt-5.2-Thinking***.  While the scores and sub-scores achieved by the two models were, in the end, identical, the author found them to have different strengths and weaknesses.  For example, **gpt-5.3-Codex-high** scored 3/3 on one particular question that had never been solved correctly by any other model, including **gpt-5.2-Thinking***.
 #### Model Access:
-**gpt-5.2-Thinking** was accessed from the author's personal ChatGPT's Plus account, with "Extended Thinking" turned on, in January 2026.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.
-
+**gpt-5.2-Thinking** was accessed from the author's personal ChatGPT Plus account, with "Extended Thinking" turned on, in January 2026.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.  **gpt-5.3-Codex-high** was accessed by the author through the terminal, with his personal ChatGPT Plus account connected.
 ### Google 
-At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-pro** achieved the second and third place, respectively, on *prinzbench*, bested only by **gpt-5.2-Thinking**.  The two models' scores were nearly identical (36/99 and 35/99, respectively).  The models exhibited especially strong Legal Research capabilities, bested - again - only by **gpt-5.2-Thinking**, and far stronger than those of the tested Anthropic, xAI and Moonshot models.  
+At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-pro** achieved the second and third place, respectively, on *prinzbench*, bested only by **gpt-5.2-Thinking**.  The two models' scores were nearly identical (36/99 and 35/99, respectively).  The models exhibited especially strong Legal Research capabilities, bested only by **gpt-5.2-Thinking**, and far stronger than those of the tested Anthropic, xAI and Moonshot models.  
+
+**gemini-3.1-pro**, benchmarked in February 2026, nearly matched OpenAI's models (**gpt-5.2-Thinking** and **gpt-5.3-Codex-high**) in performance (50/99 vs. 52/99 for each of the OpenAI models).  The author views the *prinzbench* scores achieved by these three models as roughly identical.
 #### Model Access:
-**gemini-3-flash** and **gemini-3-pro** were both accessed, in January 2026, via AI Studio, with the following settings: Temperature: 1; Thinking Level: High; Grounding with Google Search: On.
+**gemini-3-flash** and **gemini-3-pro** were both accessed, in January 2026, via AI Studio, with the following settings: Temperature: 1; Thinking Level: High; Grounding with Google Search: On.  **gemini-3-pro** was accessed via AI Studio using the same settings in February 2026.
 
 ### Anthropic
 At the benchmark's creation in January 2026, **opus-4.5** and **sonnet-4.5** achieved the worst two scores on *prinzbench* out of the eight total AI models tested.  **opus-4.5** was by far the worst-performing model on *prinzbench*, scoring just 14/99.  To the author's surprise, **sonnet-4.5** achieved a higher score on *prinzbench* than **opus-4.5** (20/99 vs. 14/99).  This difference is fairly significant, and, in the author's view, is likely explained by **sonnet-4.5** being the (slightly) better legal reasoner out of the two models - a counterintuitive result.  
 
 **opus-4.6**, released in February 2026, achieved a similar performance on *prinzbench* to Anthropic's previously tested models (19/99, one point lower than **sonnet-4.5**).   
 
-As of February 2026, the Anthropic models' Achilles' heel is their Search ability.  Both **opus-4.5** and **sonnet-4.5** scored 0/24 on the Search sub-section of *prinzbench*, and **opus-4.6** scored 1/24.  Focusing only on the Legal Research sub-scores, a more nuanced picture emerges of Anthropic models' legal reasoning ability, as, e.g., **sonnet-4.5** actually achieved a slightly higher Legal Research sub-score than the xAI and Moonshot models released in 2025 (*i.e.*, 20/75, as compared to 19/75 for **grok-4.1-Thinking** and 18/75 for **kimi-K2-Thinking**).[^2]  
+**sonnet-4.6**, also released in February 2026, achieved the worst performance on *prinzbench* out of all models benchmarked through that date (8/99).  
+
+As of February 2026, the Anthropic models' Achilles' heel is their Search ability.  All of **sonnet-4.6**, **opus-4.5** and **sonnet-4.5** scored 0/24 on the Search sub-section of *prinzbench*, and **opus-4.6** scored 1/24.  Focusing only on the Legal Research sub-scores, a more nuanced picture emerges of Anthropic models' legal reasoning ability, as, e.g., **sonnet-4.5** actually achieved a slightly higher Legal Research sub-score than the xAI and Moonshot models released in 2025 (*i.e.*, 20/75, as compared to 19/75 for **grok-4.1-Thinking** and 18/75 for **kimi-K2-Thinking**).[^2]  
 #### Model Access:
-**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  **opus-4.6** was accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in February 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.[^3]
+**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  **opus-4.6** and **sonnet-4.6** were accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in February 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.[^3]
 
 ### xAI
 At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4** achieved unspectacular scores on *prinzbench* of 25/99 and 23/99 respectively.  The models performed as well as the Google models on the Search sub-score (6/24 and 7/24, respectively - which were the same results as those achieved by **gemini-3-flash** and **gemini-3-pro**), but significantly underperformed the Google models on the Legal Research sub-score.
+
+In February 2026, **grok-4.20** achieved the fourth-highest score on *prinzbench* (43/99).  This model appears to take the "best of" the results independently achieved by four different agents, which makes it structurally different from all other models benchmarked through February 2026.  This makes it difficult to directly compare the underlying model's performance to the respective results of all other benchmarked models.[^4]    
 #### Model Access:
-**grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
+**grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026, and **grok.4.20** was accessed in the same fashion in February 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
 
 ### Moonshot AI
 On January 28, 2026, **kimi-K2.5-Thinking** achieved an impressive score of 35/99 on *prinzbench*, tying the second-place scores previously achieved by the Gemini 3 models.   
@@ -96,4 +103,6 @@ In January 2026, **qwen3-max** achieved an unspectacular score of 25/99 on *prin
 
 [^2]: The author does not consider the difference among these three scores to be significant and views the Legal Research sub-scores achieved by these three models as roughly equivalent.
 
-[^3]: Given the fact that Anthropic disabled the Ultrathink feature in Claude Code, the author saw no particular reason to attempt to test **opus-4.5** and **sonnet-4.5** in Claude Code.  The author's ad-hoc testing of **opus-4.5** in Claude Code on similar questions did not reveal any perceived difference between the model's performance in Claude Code and its performance in the Claude app.
+[^3]: Given the fact that Anthropic disabled the Ultrathink feature in Claude Code, the author saw no particular reason to attempt to test Anthropic's models in Claude Code.  The author's ad-hoc testing of **opus-4.5** in Claude Code on similar questions did not reveal any perceived difference between the model's performance in Claude Code and its performance in the Claude app.
+
+[^4]: As one point of comparison, taking the "best of three results" approach for **gemini-3.1-pro** would yield a score of 63/99 on *prinzbench*; a "best of four results" approach would possibly yield an even higher score.  
