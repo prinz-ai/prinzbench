@@ -6,10 +6,11 @@ The current leaderboard is set forth immediately below, followed by notes on met
 
 <!-- LEADERBOARD_START -->
 Last updated on March 11, 2026
-![Chart-03.11.26](/assets/chart-03-11-26.png)
+![Chart-03.18.26](/assets/chart-03-18-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
+| gpt-5.4-pro (extended)      |                             79 |                              59 |                      20 |
 | gpt-5.4 (xhigh)             |                             69 |                              50 |                      19 |
 | gpt-5.4-thinking (heavy)    |                             68 |                              49 |                      19 |
 | gpt-5.4-thinking (extended) |                             58 |                              43 |                      15 |
@@ -58,16 +59,20 @@ Some technical details regarding grading:
 
 ## Model Performance Specifics; Model Access
 ### OpenAI
-At the benchmark's creation in January 2026, **gpt-5.2-Thinking** achieved the highest score on *prinzbench* by a large margin (52/99, as compared to the next-best model's 36/99).  The model also achieved by far the best Legal Research and Search sub-scores (41/75 and 11/24, respectively).
 
-In February 2026, **gpt-5.3-Codex-high** matched the high score previously achieved by **gpt-5.2-Thinking***.  While the scores and sub-scores achieved by the two models were, in the end, identical, the author found them to have different strengths and weaknesses.  For example, **gpt-5.3-Codex-high** scored 3/3 on one particular question that had never been solved correctly by any other model, including **gpt-5.2-Thinking***.
-
-In March 2026, **gpt-5.4-Thinking** set new records in all areas tested by *prinzbench*.  In "Extended Thinking", this model easily beat the previous record-holders, **gpt-5.2-Thinking** and **gpt-5.3-Codex-high**.  In "Heavy Thinking" and "xhigh", **gpt-5.4-Thinking** set a new record for all of the full benchmark (69/99 for "xhigh"), the Legal Research score (50/75 for "xhigh") and the Search score (19/24 for each of "xhigh" and "Heavy Thinking").  
+#### GPT-5.4
+In March 2026, **gpt-5.4-Thinking** set new records in all areas tested by *prinzbench* (until subsequently bested by **gpt-5.4-Pro**; see below).  In "Extended Thinking", this model easily beat the previous record-holders, **gpt-5.2-Thinking** and **gpt-5.3-Codex-high**.  In "Heavy Thinking" and "xhigh", **gpt-5.4-Thinking** set a new record for all of the full benchmark (69/99 for "xhigh"), the Legal Research score (50/75 for "xhigh") and the Search score (19/24 for each of "xhigh" and "Heavy Thinking").  
 
 The author notes that [OpenAI's GPT-5.4 release blog post](https://openai.com/index/introducing-gpt-5-4/) seemingly calls out *prinzbench* in stating that the model "can more persistently search across multiple rounds to identify the most relevant sources, **particularly for 'needle-in-a-haystack' questions**".  As can be easily seen from the model's superb Search score (19/24, easily beating the last-generation OpenAI models (11/24) and more than twice as high as the Search scores achieved to date by the best non-OpenAI models (9/24 for **gemini-3.1-pro** and **grok-4.20**)), OpenAI has handily delivered on this promise.
 ![needle-in-haystack](/assets/needle-in-haystack.png)
+
+Later in March 2026, **gpt-5.4-Pro (Extended)**, the first of OpenAI's Pro models tested on *prinzbench*, unsurprisingly achieved SOTA scores in all categories, including the full benchmark (79/99), the Legal Research score (59/75) and the Search score (20/24, only one point better than **gpt-5.4-Thinking**; the author finds this unsurprising given that the **gpt-5.4** models have nearly saturated the Search component of the benchmark).  Given the author's personal experience with using OpenAI's Pro models for real-life legal research and analysis at the workplace, the author was somewhat surprised by this score, having expected it to be somewhat higher.  **While the score achieved by gpt-5.4-Pro on *prinzbench* is impressive, the author cautions against directly comparing it to scores achieved by the other models tested to date, since gpt-5.4-Pro is an extremely heavy reasoning model that often thinks for 30 minutes or longer at a time and expends significantly more compute than these other models.**[^5]
+#### Earlier Models
+At the benchmark's creation in January 2026, **gpt-5.2-Thinking** achieved the highest score on *prinzbench* by a large margin (52/99, as compared to the next-best model's 36/99).  The model also achieved by far the best Legal Research and Search sub-scores (41/75 and 11/24, respectively).
+
+In February 2026, **gpt-5.3-Codex-high** matched the high score previously achieved by **gpt-5.2-Thinking***.  While the scores and sub-scores achieved by the two models were, in the end, identical, the author found them to have different strengths and weaknesses.  For example, **gpt-5.3-Codex-high** scored 3/3 on one particular question that had never been solved correctly by any other model, including **gpt-5.2-Thinking***.
 #### Model Access:
-**gpt-5.2-Thinking** and **gpt-5.4-Thinking** ("Extended Thinking") were accessed from the author's personal ChatGPT Plus account in January 2026 and March 2026, respectively.  **gpt-5.4-Thinking** was accessed from the author's personal ChatGPT Pro account in March 2026.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.  **gpt-5.3-Codex-high** and **gpt-5.4-Thinking-xhigh** were accessed by the author through the terminal, with his personal ChatGPT Plus/Pro accounts connected, in February 2026 and March 2026, respectively.
+**gpt-5.2-Thinking** and **gpt-5.4-Thinking** ("Extended Thinking") were accessed from the author's personal ChatGPT Plus account in January 2026 and March 2026, respectively.  **gpt-5.4-Thinking** and **gpt-5.4-Pro** were accessed from the author's personal ChatGPT Pro account in March 2026.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.  **gpt-5.3-Codex-high** and **gpt-5.4-Thinking-xhigh** were accessed by the author through the terminal, with his personal ChatGPT Plus/Pro accounts connected, in February 2026 and March 2026, respectively.
 ### Google 
 At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-pro** achieved the second and third place, respectively, on *prinzbench*, bested only by **gpt-5.2-Thinking**.  The two models' scores were nearly identical (36/99 and 35/99, respectively).  The models exhibited especially strong Legal Research capabilities, bested only by **gpt-5.2-Thinking**, and far stronger than those of the tested Anthropic, xAI and Moonshot models.  
 
@@ -112,3 +117,5 @@ In January 2026, **qwen3-max** achieved an unspectacular score of 25/99 on *prin
 [^3]: Given the fact that Anthropic disabled the Ultrathink feature in Claude Code, the author saw no particular reason to attempt to test Anthropic's models in Claude Code.  The author's ad-hoc testing of **opus-4.5** in Claude Code on similar questions did not reveal any perceived difference between the model's performance in Claude Code and its performance in the Claude app.
 
 [^4]: As one point of comparison, taking the "best of three results" approach for **gemini-3.1-pro** would yield a score of 63/99 on *prinzbench*; a "best of four results" approach would possibly yield an even higher score.  
+
+[^5]: For example, on [ARC-AGI-2](https://arcprize.org/leaderboard), **gpt-5.4-Pro** cost $16.41 to run per task - significantly higher than the cost to run the other models tested on *prinzbench* to date.  As points of comparison, **gemini-3.1-pro** cost $0.962 per task, while **gpt-5.4 (xhigh)** cost $1.52 per task.
