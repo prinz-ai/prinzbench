@@ -5,8 +5,8 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on April 24, 2026
-![Chart-04.24.26](/assets/chart-04-24-26.png)
+Last updated on May 2, 2026
+![Chart-05.02.26](/assets/chart-05-02-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -28,13 +28,14 @@ Last updated on April 24, 2026
 | qwen-q3-max                 |                             25 |                              18 |                       7 |
 | opus-4.7                    |                             25 |                              21 |                       4 |
 | grok-4                      |                             23 |                              16 |                       7 |
+| deepseek-v4                 |                             23 |                              17 |                       6 |
 | kimi-k2-thinking            |                             22 |                              18 |                       4 |
 | sonnet-4.5                  |                             20 |                              20 |                       0 |
 | opus-4.6                    |                             19 |                              18 |                       1 |
 | opus-4.5                    |                             14 |                              14 |                       0 |
 | sonnet-4.6                  |                              8 |                               8 |                       0 |
-<font color="#ffffff">~</font>* denotes a model accessed in early testing, before public release.
 <!-- LEADERBOARD_END -->
+<font color="#ffffff">~</font>* denotes a model accessed in early testing, before public release.
 ## Purpose
 Why this benchmark was created:
 1. There has recently been much interest in benchmarks that measure LLMs' ability to perform economically valuable work.  The subject of *prinzbench* - legal research - is economically valuable work.
@@ -126,6 +127,11 @@ In January 2026, **qwen3-max** achieved an unspectacular score of 25/99 on *prin
 In April 2026, **meta-muse-spark** achieved an unspectacular score of 31/99 on *prinzbench*, several points lower than **gemini-3-pro** and significantly lower than those achieved by various models subsequently released by OpenAI and Google.  The model's Search score (7/24) was comparable to Search scores achieved by various models released in late 2025/early 2026 (such as **gemini-3-pro** and **kimi-k2-thinking**).
 #### Model Access:
 **meta-muse-spark** was accessed via meta.ai (logged in) in April 2026.
+
+### DeepSeek
+In April/May 2026, **deepseek-v4** achieved a low score of 23/99 on *prinzbench*, in line with old models like **grok-4** and **kimi-k2-thinking** (each released in June/July 2025).    
+#### Model Access:
+**deepseek-v4** was accessed via chat.deepseek.com (logged in) in April/May 2026.
 
 [^1]: Starting in April 2026, the author has, on occasion, been provided early tester access to certain OpenAI models - including, as relevant to this benchmark, **gpt-5.5-Pro** and **gpt-5.5-Thinking**.  The author has not accepted, and does not intend to accept, any compensation from OpenAI or any other lab for producing this benchmark.  Neither OpenAI nor any other lab has been provided access to any questions in *prinzbench*, nor to any similar questions that could help such lab train its models to have a higher success rate on *prinzbench*.
 
