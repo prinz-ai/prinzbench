@@ -5,8 +5,8 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on June 2, 2026
-![Chart-06.02.26](/assets/chart-06-02-26.png)
+Last updated on June 27, 2026
+![Chart-06.27.26](/assets/chart-06-27-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -25,6 +25,7 @@ Last updated on June 2, 2026
 | gemini-3-pro                |                             35 |                              29 |                       6 |
 | kimi-k2.5-thinking          |                             35 |                              28 |                       7 |
 | meta-muse-spark             |                             31 |                              24 |                       7 |
+| glm-5.2                     |                             30 |                              25 |                       5 |
 | grok-4.1-thinking           |                             25 |                              19 |                       6 |
 | qwen-q3-max                 |                             25 |                              18 |                       7 |
 | opus-4.7                    |                             25 |                              21 |                       4 |
@@ -134,6 +135,11 @@ In April 2026, **meta-muse-spark** achieved an unspectacular score of 31/99 on *
 In April/May 2026, **deepseek-v4-pro** achieved a low score of 23/99 on *prinzbench*, in line with old models like **grok-4** and **kimi-k2-thinking** (each released in June/July 2025).    
 #### Model Access:
 **deepseek-v4-pro** was accessed via chat.deepseek.com (logged in) in April/May 2026.
+
+### Z.ai
+In June 2026, **glm-5.2** achieved a low score of 30/99 on *prinzbench*, beating the likes of **deepseek-v4-pro**, but significantly trailing then-current frontier Western models (and even trailing the likes of **gemini-3-pro**, released 8 months earlier).    
+#### Model Access:
+**glm-5.2** was accessed via chat.z.ai.  All prompts were run at Deep Think Max settings, with Advanced Search on.
 
 [^1]: Starting in April 2026, the author has, on occasion, been provided early tester access to certain OpenAI models - including, as relevant to this benchmark, **gpt-5.5-Pro** and **gpt-5.5-Thinking**.  The author has not accepted, and does not intend to accept, any compensation from OpenAI or any other lab for producing this benchmark.  Neither OpenAI nor any other lab has been provided access to any questions in *prinzbench*, nor to any similar questions that could help such lab train its models to have a higher success rate on *prinzbench*.
 
