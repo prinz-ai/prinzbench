@@ -5,8 +5,8 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
 <!-- LEADERBOARD_START -->
-Last updated on May 2, 2026
-![Chart-05.02.26](/assets/chart-05-02-26.png)
+Last updated on July 6, 2026
+![Chart-07.06.26](/assets/chart-07-06-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -16,14 +16,17 @@ Last updated on May 2, 2026
 | gpt-5.4 (xhigh)             |                             69 |                              50 |                      19 |
 | gpt-5.4-thinking (heavy)    |                             68 |                              49 |                      19 |
 | gpt-5.4-thinking (extended) |                             58 |                              43 |                      15 |
+| fable-5 (max)               |                             56 |                              49 |                       7 |
 | gpt-5.2-thinking (extended) |                             52 |                              41 |                      11 |
 | gpt-5.3-codex-high          |                             52 |                              41 |                      11 |
 | gemini-3.1-pro              |                             50 |                              41 |                       9 |
 | grok-4.20                   |                             43 |                              34 |                       9 |
+| opus-4.8 (max)              |                             42 |                              35 |                       7 |
 | gemini-3-flash              |                             36 |                              29 |                       7 |
 | gemini-3-pro                |                             35 |                              29 |                       6 |
 | kimi-k2.5-thinking          |                             35 |                              28 |                       7 |
 | meta-muse-spark             |                             31 |                              24 |                       7 |
+| glm-5.2                     |                             30 |                              25 |                       5 |
 | grok-4.1-thinking           |                             25 |                              19 |                       6 |
 | qwen-q3-max                 |                             25 |                              18 |                       7 |
 | opus-4.7                    |                             25 |                              21 |                       4 |
@@ -86,6 +89,7 @@ In March 2026, **gpt-5.4-Thinking** achieved better scores than **gpt-5.2-Thinki
 
 The author had early access to **gpt-5.5-Pro** and **gpt-5.5-Thinking**; see footnote 1 for more details.
 ### Google 
+
 At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-pro** achieved the second and third place, respectively, on *prinzbench*, bested only by **gpt-5.2-Thinking**.  The two models' scores were nearly identical (36/99 and 35/99, respectively).  The models exhibited especially strong Legal Research capabilities, bested only by **gpt-5.2-Thinking**, and far stronger than those of the tested Anthropic, xAI and Moonshot models.  
 
 **gemini-3.1-pro**, benchmarked in February 2026, nearly matched OpenAI's models (**gpt-5.2-Thinking** and **gpt-5.3-Codex-high**) in performance (50/99 vs. 52/99 for each of the OpenAI models).  The author views the *prinzbench* scores achieved by these three models as roughly identical.
@@ -93,16 +97,16 @@ At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-p
 **gemini-3-flash** and **gemini-3-pro** were both accessed, in January 2026, via AI Studio, with the following settings: Temperature: 1; Thinking Level: High; Grounding with Google Search: On.  **gemini-3-pro** was accessed via AI Studio using the same settings in February 2026.
 
 ### Anthropic
-#### Opus 4.7
-In April 2026, **opus-4.7** achieved the best score by an Anthropic model on *prinzbench* to date, scoring 25/99 (as compared to 20/99 achieved by **sonnet-4.5** and 19/99 achieved by **opus-4.6**).  The model's Legal Research score was comparable to that of **sonnet-4.5** (21/75 vs. 20/75), while its Search score (4/24) was significantly higher than that achieved by any other Anthropic model to date (**opus-4.6** scored 1/24; all other Anthropic models tested to date scored 0/24).
+#### Fable 5 (Max)
+In June-July 2026, **fable-5 (max)** achieved by far the best score by any non-OpenAI model on *prinzbench* to date, scoring 56/99.  The model achieved an excellent Legal Research score (49/75), but scored poorly on Search (7/24).  
 
-The reason for the gap in performance between Anthropic's models and many models released by various other labs that have been tested on *prinzbench* to date remains unclear.  The author continues to suspect that Anthropic's models would score somewhat higher on the benchmark if they had better search capabilities.
+The model's performance on Legal Research (49/75) tied with **gpt-5.4-Thinking (heavy)**, but was worse than **gpt-5.5-Thinking (heavy)** (56/75).  It is important to remember that the *prinzbench* Legal Research score depends in part on a model's Search capabilities, because answering a Legal Research question correctly requires the model to: (i) find the relevant legal authorities online (*i.e.,* perform a web search), and (ii) correctly interpret these legal authorities.  The author believes that, if **fable-5** were equipped with better web search capabilities, its Legal Research score would improve beyond 49/75 - although it is not clear whether, in such circumstances, it would perform below, at, or above the **gpt-5.5-Thinking (heavy)** level.  Disregarding **fable-5**'s poor web search capabilities, the author is inclined to generally view **fable-5 (max)** and **gpt-5.5-Thinking (heavy)** as models of approximately the same class (with a slight preference towards the latter).
 #### Earlier Models
-At the benchmark's creation in January 2026, **opus-4.5** and **sonnet-4.5** achieved the worst two scores on *prinzbench* out of the eight total AI models tested (14/99 and 20/99, respectively).  To the author's surprise, **sonnet-4.5** achieved a higher score on *prinzbench* than **opus-4.5** (20/99 vs. 14/99).  This difference is fairly significant, and, in the author's view, is likely explained by **sonnet-4.5** being the (slightly) better legal reasoner out of the two models - a counterintuitive result.  
+Between January and April 2026, Anthropic models (**opus-4.5** through **opus-4.7** and **sonnet-4.5** through **sonnet-4.6**) achieved poor scores on *prinzbench*, with **opus-4.7** scoring the highest (25/99).  These models performed particularly poorly on Search, with **opus-4.7** scoring the highest (4/24).
 
-**opus-4.6**, released in February 2026, achieved a similar performance on *prinzbench* to Anthropic's previously tested models (19/99, one point lower than **sonnet-4.5**).  **sonnet-4.6**, also released in February 2026, achieved the worst performance on *prinzbench* out of all models benchmarked through that date (8/99).  
+In June 2026, **opus-4.8 (max)** achieved the best score by an Anthropic model on *prinzbench* to date, scoring 42/99.  The author speculates that much of the gain in performance between **opus-4.7** and **opus-4.8** (25/99 vs. 42/99) was due to the Max reasoning setting that was not available for the former model, but became available for the latter.
 #### Model Access:
-**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  **opus-4.6** and **sonnet-4.6** were accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in February 2026.  **opus-4.7** was accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in April 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.
+**opus-4.5** and **sonnet-4.5** were both accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in January 2026.  **opus-4.6** and **sonnet-4.6** were accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in February 2026.  **opus-4.7** was accessed from the author's personal Claude Pro account, with "Extended Thinking" turned on, in April 2026.  **opus-4.8** was accessed form the author's personal Claude Pro account, with "Max" reasoning effort turned on, in late May/early June 2026.  **fable-5** was accessed form the author's personal Claude Pro account, with "Max" reasoning effort turned on, in June 2026 and (following the model's re-release) in early July 2026.  Each chat was a temporary chat in order to disable Claude's Memory and custom instructions features.
 
 ### xAI
 At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4** achieved unspectacular scores on *prinzbench* of 25/99 and 23/99 respectively.  The models performed as well as the Google models on the Search sub-score (6/24 and 7/24, respectively - which were the same results as those achieved by **gemini-3-flash** and **gemini-3-pro**), but significantly underperformed the Google models on the Legal Research sub-score.
@@ -132,6 +136,11 @@ In April 2026, **meta-muse-spark** achieved an unspectacular score of 31/99 on *
 In April/May 2026, **deepseek-v4-pro** achieved a low score of 23/99 on *prinzbench*, in line with old models like **grok-4** and **kimi-k2-thinking** (each released in June/July 2025).    
 #### Model Access:
 **deepseek-v4-pro** was accessed via chat.deepseek.com (logged in) in April/May 2026.
+
+### Z.ai
+In June 2026, **glm-5.2** achieved a low score of 30/99 on *prinzbench*, beating the likes of **deepseek-v4-pro**, but significantly trailing then-current frontier Western models (and even trailing the likes of **gemini-3-pro**, released 8 months earlier).    
+#### Model Access:
+**glm-5.2** was accessed via chat.z.ai.  All prompts were run at Deep Think Max settings, with Advanced Search on.
 
 [^1]: Starting in April 2026, the author has, on occasion, been provided early tester access to certain OpenAI models - including, as relevant to this benchmark, **gpt-5.5-Pro** and **gpt-5.5-Thinking**.  The author has not accepted, and does not intend to accept, any compensation from OpenAI or any other lab for producing this benchmark.  Neither OpenAI nor any other lab has been provided access to any questions in *prinzbench*, nor to any similar questions that could help such lab train its models to have a higher success rate on *prinzbench*.
 
