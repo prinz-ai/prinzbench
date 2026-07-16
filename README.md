@@ -4,12 +4,15 @@ prinzbench is a private benchmark that ranks LLMs based on their ability to cond
 
 The current leaderboard is set forth immediately below, followed by notes on methodology, grading, model access and specific models' performance.
 
+**IMPORTANT UPDATE**:  This benchmark was created in January 2026, with the goal of testing frontier AI models' ability to conduct legal research.  In June 2026, **gpt-5.6-Sol-Pro** achieved a score of 91/99 on *prinzbench*, effectively saturating it.  My benchmark lasted 6 months!  I extend my heartfelt congratulations to OpenAI - gg!
+
 <!-- LEADERBOARD_START -->
-Last updated on July 6, 2026
-![Chart-07.06.26](/assets/chart-07-06-26.png)
+Last updated on July 16, 2026
+![Chart-07.16.26](/assets/chart-07-16-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
+| gpt-5.6-sol-pro*            |                             91 |                              67 |                      24 |
 | gpt-5.5-pro (extended)*     |                             82 |                              63 |                      19 |
 | gpt-5.4-pro (extended)      |                             79 |                              59 |                      20 |
 | gpt-5.5-thinking (heavy)*   |                             74 |                              56 |                      18 |
@@ -65,29 +68,32 @@ Each LLM's response to each question was personally graded by the author, unaide
 Some technical details regarding grading:
 * A response was judged to be correct if the correct legal conclusion was present anywhere within the model's response.  For example, suppose the correct answer to a particular question is: "You must aggregate the impact of not fewer than 1,000 different transactions of the same type in order to violate a law; because it's unlikely that there would ever be 1,000 such transactions within the specified time frame, it is almost certain that the law was not violated."  If this exact reasoning was included in the body of the model's response, but the model's concluding paragraph simply said that the law was not violated, the response was marked as correct.
 * LLMs have a tendency to include extraneous information in their responses, which is not directly relevant to answering the question.  In grading LLMs' responses, all such extraneous information was ignored - regardless of whether it was factually accurate or legally correct.  In other words, the models were graded on their ability to answer the specific question, not on the accuracy of the entirety of the response.
+## Benchmark Phase-Out
+The following models will no longer be tested on *prinzbench*:
+* After **gpt-5.6-Sol-Pro** scored 91/99 on *prinzbench* in June 2026, OpenAI's Pro models are no longer being tested on *prinzbench*.  
 
 ## Model Performance Specifics; Model Access
 ### OpenAI
-#### GPT-5.5
-In April 2026, **gpt-5.5-Pro (Extended)** set a new record on *prinzbench*, scoring 82/99 overall (3 points higher than **gpt-5.4-Pro (Extended)**).  The model performed significantly better than **gpt-5.4-Pro (Extended)** in Legal Research (63/75 vs. 59/75), but slightly worse in Search (19/24 vs. 20/24).
+#### GPT-5.6
+In June 2026, **gpt-5.6-Sol-Pro** saturated *prinzbench*, with an overall score of 91/99.  The model achieved a perfect Search sub-score (24/24).  
 
-Putting the Pro models (which involve parallelized compute; see the note below) to the side, **gpt-5.5-Thinking (Heavy)**, likewise tested in April 2026, is the best-performing model on *prinzbench*, having scored 74/99 overall.  This model performed significantly better (*i.e.*, 5 points higher) than the next-best non-Pro model, **gpt-5.4 (xhigh)**.  The model performed significantly better than **gpt-5.4 (xhigh)** in Legal Research (56/75 vs. 50/75), but slightly worse in Search (18/24 vs. 19/24).
+The author notes that *prinzbench* contains two questions that no model tested to date has ever been able to solve.  One of these questions involves an extremely thorough 50-state search, and may therefore be too difficult for modern models to answer without running in /goal mode (or similar) in an agentic harness.  The other of these two questions requires the model to identify a total of four required regulatory approvals (one easy, two very difficult and one extremely difficult); **gpt-5.6-Sol-Pro** was able to find the one easy and two very difficult approvals, but could not find the extremely difficult approval.  Putting these two questions (which are worth a total of 6 points) aside, **gpt-5.6-Sol-Pro** provided correct responses to 91 out of 93 *prinzbench* questions - an extremely impressive performance. 
 
-These results indicate to the author that the **gpt-5.5** models are better reasoners than the **gpt-5.4** models, but have slightly worse search capabilities (potentially because they produce significantly faster results - including, presumably, by spending less time searching).
+Other GPT-5.6 models will be tested on *prinzbench* separately; please stay tuned.
 
-As stated by the author [elsewhere](https://x.com/deredleritt3r/status/2047395657405940054), **gpt-5.5-Pro (Extended)** took significantly less time to respond per question than **gpt-5.4-Pro (Extended)** (≈8 minutes vs. ≈30 minutes per question).  Similarly, **gpt-5.5-Thinking (Heavy)** took significantly less time to respond per question than the **gpt-5.4-Thinking** models (≈2 minutes vs. ≈8 minutes per question).  This is a significant improvement in speed, which should make the **gpt-5.5** models even more useful in legal work.
-
-**While the scores achieved by gpt-5.5-Pro and gpt-5.4-Pro on *prinzbench* are impressive, the author cautions against directly comparing them to scores achieved by the other models tested to date, since the Pro models are extremely heavy reasoning models that use parallel test-time compute and consequently typically expend significantly more compute than these other models.**[^3]
+**While the scores achieved by OpenAI's Pro models on *prinzbench* are impressive, the author cautions against directly comparing them to scores achieved by the other models tested to date, since the Pro models are extremely heavy reasoning models that use parallel test-time compute.**[^3]
 #### Earlier Models
 At the benchmark's creation in January 2026, **gpt-5.2-Thinking** achieved the highest score on *prinzbench* by a large margin (52/99, as compared to the next-best model's 36/99).  The model also achieved by far the best Legal Research and Search sub-scores (41/75 and 11/24, respectively).
 
 In February 2026, **gpt-5.3-Codex-high** matched the high score previously achieved by **gpt-5.2-Thinking***.  While the scores and sub-scores achieved by the two models were, in the end, identical, the author found them to have different strengths and weaknesses.  For example, **gpt-5.3-Codex-high** scored 3/3 on one particular question that had never been solved correctly by any other model, including **gpt-5.2-Thinking***.
 
 In March 2026, **gpt-5.4-Thinking** achieved better scores than **gpt-5.2-Thinking** across the board.  Specifically, **gpt-5.4-Thinking (Extended)** scored 6 points higher on *prinzbench* than **gpt-5.2-Thinking (Extended)** (58/99 vs. 52/99), while **gpt-5.4 (xhigh)** achieved the then-best result for a non-Pro model (69/99).  In addition, **gpt-5.4-Pro (Extended)** achieved an overall score of 79/99 on *prinzbench* - which was the best performance by any model on the benchmark through that date.  In particular, the **gpt-5.4** models performed remarkably well on the Search component of *prinzbench* (20/24 for **gpt-5.4-Pro (Extended)** and 19/24 for each of **gpt-5.4-Thinking (Heavy)** and **gpt-5.4 (xhigh)**).
-#### Model Access:
-**gpt-5.2-Thinking** and **gpt-5.4-Thinking** ("Extended Thinking") were accessed from the author's personal ChatGPT Plus account in January 2026 and March 2026, respectively.  The **gpt-5.5** models and the **gpt-5.4** models (in each case, using the "Extended" reasoning effort for the Pro models and the "Heavy" reasoning effort for the Thinking models) were accessed from the author's personal ChatGPT Pro account in April 2026 and March 2026, respectively.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.  **gpt-5.3-Codex-high** and **gpt-5.4-Thinking-xhigh** were accessed by the author through the terminal, with his personal ChatGPT Plus/Pro accounts connected, in February 2026 and March 2026, respectively.
 
-The author had early access to **gpt-5.5-Pro** and **gpt-5.5-Thinking**; see footnote 1 for more details.
+In April 2026, In April 2026, **gpt-5.5-Pro (Extended)** set a new record on *prinzbench*, scoring 82/99 overall, having performed significantly better than **gpt-5.4-Pro (Extended)** in Legal Research (63/75 vs. 59/75), but slightly worse in Search (19/24 vs. 20/24).  In addition, **gpt-5.5-Thinking (Heavy)**, scored 74/99 on *prinzbench* - the best result by a non-Pro model.  
+#### Model Access:
+**gpt-5.6-Sol-Pro** was accessed from the author's personal ChatGPT Pro account in June 2026.  **gpt-5.2-Thinking** and **gpt-5.4-Thinking** ("Extended Thinking") were accessed from the author's personal ChatGPT Plus account in January 2026 and March 2026, respectively.  The **gpt-5.5** models and the **gpt-5.4** models (in each case, using the "Extended" reasoning effort for the Pro models and the "Heavy" reasoning effort for the Thinking models) were accessed from the author's personal ChatGPT Pro account in April 2026 and March 2026, respectively.  Each chat was a temporary chat in order to disable ChatGPT's Memory and custom instructions features.  **gpt-5.3-Codex-high** and **gpt-5.4-Thinking-xhigh** were accessed by the author through the terminal, with his personal ChatGPT Plus/Pro accounts connected, in February 2026 and March 2026, respectively.
+
+The author had early access to **gpt-5.6-Sol-Pro**, **gpt-5.5-Pro** and **gpt-5.5-Thinking**; see footnote 1 for more details.
 ### Google 
 
 At the benchmark's creation in January 2026, **gemini-3-flash** and **gemini-3-pro** achieved the second and third place, respectively, on *prinzbench*, bested only by **gpt-5.2-Thinking**.  The two models' scores were nearly identical (36/99 and 35/99, respectively).  The models exhibited especially strong Legal Research capabilities, bested only by **gpt-5.2-Thinking**, and far stronger than those of the tested Anthropic, xAI and Moonshot models.  
@@ -111,7 +117,7 @@ In June 2026, **opus-4.8 (max)** achieved the best score by an Anthropic model o
 ### xAI
 At the benchmark's creation in January 2026, **grok-4.1-Thinking** and **grok-4** achieved unspectacular scores on *prinzbench* of 25/99 and 23/99 respectively.  The models performed as well as the Google models on the Search sub-score (6/24 and 7/24, respectively - which were the same results as those achieved by **gemini-3-flash** and **gemini-3-pro**), but significantly underperformed the Google models on the Legal Research sub-score.
 
-In February 2026, **grok-4.20** achieved the fourth-highest score on *prinzbench* (43/99).  This model appears to take the "best of" the results independently achieved by four different agents, which makes it structurally different from all other models benchmarked through February 2026.  This makes it difficult to directly compare the underlying model's performance to the respective results of all other benchmarked models.[^4]    l
+In February 2026, **grok-4.20** achieved the fourth-highest score on *prinzbench* (43/99).  This model appears to take the "best of" the results independently achieved by four different agents, which makes it structurally different from all other models benchmarked through February 2026.  This makes it difficult to directly compare the underlying model's performance to the respective results of all other benchmarked models.[^4]    
 #### Model Access:
 **grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026, and **grok.4.20** was accessed in the same fashion in February 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
 
@@ -142,7 +148,7 @@ In June 2026, **glm-5.2** achieved a low score of 30/99 on *prinzbench*, beating
 #### Model Access:
 **glm-5.2** was accessed via chat.z.ai.  All prompts were run at Deep Think Max settings, with Advanced Search on.
 
-[^1]: Starting in April 2026, the author has, on occasion, been provided early tester access to certain OpenAI models - including, as relevant to this benchmark, **gpt-5.5-Pro** and **gpt-5.5-Thinking**.  The author has not accepted, and does not intend to accept, any compensation from OpenAI or any other lab for producing this benchmark.  Neither OpenAI nor any other lab has been provided access to any questions in *prinzbench*, nor to any similar questions that could help such lab train its models to have a higher success rate on *prinzbench*.
+[^1]: Starting in April 2026, the author has, on occasion, been provided early tester access to certain OpenAI models - including, as relevant to this benchmark, **gpt-5.6-Sol-Pro**, **gpt-5.5-Pro** and **gpt-5.5-Thinking**.  The author has not accepted, and does not intend to accept, any compensation from OpenAI or any other lab for producing this benchmark.  Neither OpenAI nor any other lab has been provided access to any questions in *prinzbench*, nor to any similar questions that could help such lab train its models to have a higher success rate on *prinzbench*.
 
 [^2]: This particular niche area of U.S. law is not well-represented in existing LLMs' training data, as shown by the fairly poor *prinzbench* scores achieved by several frontier models, including Anthropic's Opus 4.5 and Sonnet 4.5, as well as models released by Moonshot and xAI.  
 
