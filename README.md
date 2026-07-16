@@ -41,7 +41,7 @@ Last updated on July 16, 2026
 | opus-4.5                    |                             14 |                              14 |                       0 |
 | sonnet-4.6                  |                              8 |                               8 |                       0 |
 <!-- LEADERBOARD_END -->
-<font color="#ffffff">~</font>* denotes a model accessed in early testing, before public release.
+<font color="#ffffff"></font>* denotes a model accessed in early testing, before public release.
 ## Purpose
 Why this benchmark was created:
 1. There has recently been much interest in benchmarks that measure LLMs' ability to perform economically valuable work.  The subject of *prinzbench* - legal research - is economically valuable work.
@@ -77,7 +77,7 @@ The following models will no longer be tested on *prinzbench*:
 #### GPT-5.6
 In June 2026, **gpt-5.6-Sol-Pro** saturated *prinzbench*, with an overall score of 91/99.  The model achieved a perfect Search sub-score (24/24).  
 
-The author notes that *prinzbench* contains two questions that no model tested to date has ever been able to solve.  One of these questions involves an extremely thorough 50-state search, and may therefore be too difficult for modern models to answer without running in /goal mode (or similar) in an agentic harness.  The other of these two questions requires the model to identify a total of four required regulatory approvals (one easy, two very difficult and one extremely difficult); **gpt-5.6-Sol-Pro** was able to find the one easy and two very difficult approvals, but could not find the extremely difficult approval.  Putting these two questions (which are worth a total of 6 points) aside, **gpt-5.6-Sol-Pro** provided correct responses to 91 out of 93 *prinzbench* questions - an extremely impressive performance. 
+The author notes that *prinzbench* contains two questions that no model tested to date has ever been able to solve.  One of these questions involves an extremely thorough 50-state search, and may therefore be too difficult for modern models to answer without running in /goal mode (or similar) in an agentic harness.  The other question requires the model to identify a total of four required regulatory approvals (one easy, two very difficult and one extremely difficult); **gpt-5.6-Sol-Pro** was able to find the one easy and two very difficult approvals, but could not find the extremely difficult approval.  Putting these two questions (which are worth a total of 6 points) aside, **gpt-5.6-Sol-Pro** provided correct responses to 91 out of 93 *prinzbench* questions - an extremely impressive performance. 
 
 Other GPT-5.6 models will be tested on *prinzbench* separately; please stay tuned.
 
@@ -152,6 +152,6 @@ In June 2026, **glm-5.2** achieved a low score of 30/99 on *prinzbench*, beating
 
 [^2]: This particular niche area of U.S. law is not well-represented in existing LLMs' training data, as shown by the fairly poor *prinzbench* scores achieved by several frontier models, including Anthropic's Opus 4.5 and Sonnet 4.5, as well as models released by Moonshot and xAI.  
 
-[^3]: For example, on [ARC-AGI-2](https://arcprize.org/leaderboard), **gpt-5.4-Pro** cost $16.41 to run per task - significantly higher than the cost to run the other models tested on *prinzbench* to date.  In comparison, **gemini-3.1-pro** cost $0.962 per task, while **gpt-5.4 (xhigh)** cost $1.52 per task.
+[^3]: For example, on [ARC-AGI-2](https://arcprize.org/leaderboard), **gpt-5.4-Pro** cost $16.41 to run per task - significantly higher than the cost to run the other models tested on *prinzbench* to date.  In comparison, **gemini-3.1-pro** cost $0.962 per task, while **gpt-5.4 (xhigh)** cost $1.52 per task.  The author notes that he is not aware of any publicly available evidence that **gpt-5.6-Sol-Pro** uses parallel test-time compute. 
 
 [^4]: As one point of comparison, taking the "best of three results" approach for **gemini-3.1-pro** would yield a score of 63/99 on *prinzbench*; a "best of four results" approach would possibly yield an even higher score.
