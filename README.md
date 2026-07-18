@@ -7,8 +7,8 @@ The current leaderboard is set forth immediately below, followed by notes on met
 **IMPORTANT UPDATE**:  This benchmark was created in January 2026, with the goal of testing frontier AI models' ability to conduct legal research.  In June 2026, **gpt-5.6-Sol-Pro** achieved a score of 91/99 on *prinzbench*, effectively saturating it.  My benchmark lasted 6 months!  I extend my heartfelt congratulations to OpenAI - gg!
 
 <!-- LEADERBOARD_START -->
-Last updated on July 16, 2026
-![Chart-07.16.26](/assets/chart-07-16-26.png)
+Last updated on July 18, 2026
+![Chart-07.18.26](/assets/chart-07-18-26.png)
 
 | Model                       | prinzbench (full) score (x/99) | Legal Research Sub-Score (x/75) | Search Sub-Score (x/24) |
 | --------------------------- | -----------------------------: | ------------------------------: | ----------------------: |
@@ -23,6 +23,7 @@ Last updated on July 16, 2026
 | gpt-5.2-thinking (extended) |                             52 |                              41 |                      11 |
 | gpt-5.3-codex-high          |                             52 |                              41 |                      11 |
 | gemini-3.1-pro              |                             50 |                              41 |                       9 |
+| kimi-k3                     |                             47 |                              36 |                      11 |
 | grok-4.20                   |                             43 |                              34 |                       9 |
 | opus-4.8 (max)              |                             42 |                              35 |                       7 |
 | gemini-3-flash              |                             36 |                              29 |                       7 |
@@ -122,11 +123,17 @@ In February 2026, **grok-4.20** achieved the fourth-highest score on *prinzbench
 **grok-4.1-Thinking** and **grok-4** were both accessed from the author's personal SuperGrok account in January 2026, and **grok.4.20** was accessed in the same fashion in February 2026.  Each chat was a temporary chat in order to disable Memory and custom instructions features.
 
 ### Moonshot AI
-On January 28, 2026, **kimi-K2.5-Thinking** achieved an impressive score of 35/99 on *prinzbench*, tying the second-place scores previously achieved by the Gemini 3 models.   
+#### Kimi K3
+In July 2026, **kimi-K3** achieved the best score by an open-source model on *prinzbench* to date, scoring 47/99.  **kimi-K3** was the first non-OpenAI model to get 10 or more questions correct on the Search sub-component of the benchmark (11/24).  
 
-At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an unspectacular score of 22/99 on *prinzbench*.  The model's performance was similar to the performance of the xAI models, although it slightly lagged them in the Search sub-score (4/24 vs. 7/24 and 6/24 for **grok-4** and **grok-4.1-Thinking**, respectively).
+The author observes that **kimi-K3**'s responses were very inconsistent in quality: at times, the model struggled with fairly easy *prinzbench* questions that most other modern models are able to nearly always answer correctly; but, on the other hand, some of **kimi-K3**'s responses to much harder questions were very impressive.
+
+Subjectively, the author views this model as roughly similar to **gemini-3.1-pro** (released in February 2026) in legal research capabilities (albeit slightly better at search, perhaps slightly worse at logical reasoning, and somewhat more inconsistent).
+
+#### Earlier Models
+On January 28, 2026, **kimi-K2.5-Thinking** achieved an impressive score of 35/99 on *prinzbench*, tying the second-place scores previously achieved by the Gemini 3 models.  At the benchmark's creation in January 2026, **kimi-K2-Thinking** achieved an unspectacular score of 22/99 on *prinzbench*.  The model's performance was similar to the performance of the xAI models, although it slightly lagged them in the Search sub-score (4/24 vs. 7/24 and 6/24 for **grok-4** and **grok-4.1-Thinking**, respectively).
 #### Model Access:
-**kimi-K2.5-Thinking** and **kimi-K2-Thinking** were accessed via kimi.com (logged in) in January 2026.
+**kimi-K3** was accessed via kimi.com in July 2026 via kimi.com (logged in), and was set at Max reasoning effort.  **kimi-K2.5-Thinking** and **kimi-K2-Thinking** were accessed via kimi.com (logged in) in January 2026.
 
 ### Alibaba Cloud
 In January 2026, **qwen3-max** achieved an unspectacular score of 25/99 on *prinzbench*, tying with **grok-4.1-Thinking**.  The model performed significantly worse than **kimi-K2.5-Thinking**, which was released by Moonshot AI on the same day.
